@@ -4,11 +4,11 @@ Project displaying Linux scripts, Azure Virtual Network with ELK Server and Diag
 
 The files in this repository were used to configure the network depicted below.
 
-https://github.com/Oumazing/OK-Cybersecurity-Project-I/blob/main/Diagrams/Azure%20VNET%20With%20ELK%20Server.png
+[VNET Diagram](https://github.com/Oumazing/OK-Cybersecurity-Project-I/blob/main/Diagrams/Azure%20VNET%20With%20ELK%20Server.png)
 
 These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the playbook file may be used to install only certain pieces of it, such as Filebeat.
 
-https://github.com/Oumazing/OK-Cybersecurity-Project-I/blob/main/Ansible/ELK_yml.txt
+[ELK Playbook](https://github.com/Oumazing/OK-Cybersecurity-Project-I/blob/main/Ansible/ELK_yml.txt)
 
 This document contains the following details:
 - Description of the Topology
@@ -60,10 +60,10 @@ A summary of the access policies in place can be found in the table below.
 
 | Name     | Publicly Accessible | Allowed IP Addresses |
 |----------|---------------------|----------------------|
-| Jump Box | Yes                 |20.222.210.155	      |
-| Web-1    | No                  |10.0.0.5              |
-| Web-2    | No                  |10.0.0.6              |
-|ELK server|No			             |10.0.0.7		          |
+| Jump Box | Yes                 |74.96.82.147	        |
+| Web-1    | No                  |10.0.0.4              |
+| Web-2    | No                  |10.0.0.4              |
+|ELK server|No			             |10.0.0.4		          |
 
 ### Elk Configuration
 
@@ -80,7 +80,7 @@ The playbook implements the following tasks:
 
 The following screenshot displays the result of running `docker ps` after successfully configuring the ELK instance.
 
-https://github.com/Oumazing/OK-Cybersecurity-Project-I/blob/main/Ansible/Docker%20PS.png
+[Docker PS](https://github.com/Oumazing/OK-Cybersecurity-Project-I/blob/main/Ansible/Docker%20PS.png)
 
 
 ### Target Machines & Beats
@@ -101,12 +101,11 @@ These Beats allow us to collect the following information from each machine:
 - Filebeat collects data relating to the system's log files specified by the system administrator on the networks webservers and then collects log events 
   for indexing and for visual representation in Kibana for further investigation when necessary. User should see an output similar to the following:
 
-[Filebeat output example] https://github.com/Oumazing/OK-Cybersecurity-Project-I/blob/main/Ansible/FileBeat%20Syslog.png
+[Filebeat output example](https://github.com/Oumazing/OK-Cybersecurity-Project-I/blob/main/Ansible/FileBeat%20Syslog.png)
 
 - Metricbeat is a monitoring utility that periodically records the VMs operating system's metrics as well as services running on the web servers such number of machines/webservers, 
-  machines names and dockers deployed on the machines, machines uptime, CPU usage and amount of memory used. User should see an output similar to the following: 
+  machines names and dockers deployed on the machines, machines uptime, CPU usage and amount of memory used. 
 
-[Metricbeat output example] (https://github.com/Oumazing/OK-Cybersecurity-Project-I/blob/main/Ansible/MetricBeat%20Screenshot2.png)
 
 ### Using the Playbook
 
